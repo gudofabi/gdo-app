@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('bill_groups', function (Blueprint $table) {
             $table->id();
+            $table->date('date')->nullable();
+            $table->decimal('total', 10, 2)->default(0)->nullable();
             $table->timestamps();
         });
     }
